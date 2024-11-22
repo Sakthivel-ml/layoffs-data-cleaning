@@ -36,9 +36,10 @@ The dataset contains columns such as `company`, `location`, `industry`, `total_l
 CREATE TABLE laysoffs_stage LIKE layoffs;
 INSERT INTO laysoffs_stage SELECT * FROM layoffs;
 SELECT *, ROW_NUMBER() OVER(PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, date, stage, country, funds_raised_millions) AS row_num FROM laysoffs_stage;
+```
 
 # Data Transformation and Cleaning
-
+```sql
 -- Create laysoffs_stage2 table
 CREATE TABLE laysoffs_stage2 (
   company TEXT,
@@ -70,10 +71,11 @@ UPDATE laysoffs_stage2 SET industry = 'Crypto' WHERE industry LIKE 'Crypto%';
 
 -- Remove periods from country names
 UPDATE laysoffs_stage2 SET country = TRIM(TRAILING '.' FROM country) WHERE country LIKE 'United States%';
-
+```
 #Technologies Used
 SQL: All data cleaning and transformation tasks were performed using SQL.
 MySQL: The SQL queries were executed on a MySQL database.
+
 #Conclusion
 This project effectively cleans and prepares the layoffs dataset for analysis by removing duplicates, handling missing values, and standardizing the data. The resulting dataset is now ready for further analysis or visualization tasks.
 
