@@ -21,7 +21,7 @@ The dataset contains columns such as `company`, `location`, `industry`, `total_l
 3. **Data Cleaning**: 
    - Data cleaning steps include:
      - **Trimming whitespace** from company names.
-     - **Standardizing industry names** (e.g., "Crypto" names are unified).
+     - **Standardizing industry names** (e.g., "Crypto" names are unified)\\.
      - **Fixing country names** by removing any trailing periods.
      - **Handling missing data** by deleting rows with missing critical values or filling in values from matching records.
 
