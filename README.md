@@ -72,11 +72,11 @@ UPDATE laysoffs_stage2 SET industry = 'Crypto' WHERE industry LIKE 'Crypto%';
 -- Remove periods from country names
 UPDATE laysoffs_stage2 SET country = TRIM(TRAILING '.' FROM country) WHERE country LIKE 'United States%';
 ```
-#Technologies Used
-SQL: All data cleaning and transformation tasks were performed using SQL.
-MySQL: The SQL queries were executed on a MySQL database.
+# Technologies Used
+- **SQL: All data cleaning and transformation tasks were performed using SQL.**
+- **MySQL: The SQL queries were executed on a MySQL database.**
 
-#Conclusion
+# Conclusion
 This project effectively cleans and prepares the layoffs dataset for analysis by removing duplicates, handling missing values, and standardizing the data. The resulting dataset is now ready for further analysis or visualization tasks.
 
 ## License
